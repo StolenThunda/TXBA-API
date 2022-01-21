@@ -1,8 +1,9 @@
+import 'dotenv/config';
 import cheerio from "cheerio";
 import express from 'express';
 import lib from './lib.js';
 const txba = new lib
-const port = 5000
+const port = process.env.PORT || 5000
 const app = express()
 
 const fakeFavHTML = () => {
