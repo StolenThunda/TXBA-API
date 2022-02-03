@@ -399,7 +399,8 @@ export default class TXBA_Utilities {
       parsable = this.fakeFavHTML()
     }
 
-    return this.parseFavoriteData( parsable )
+    this.favs = parsedthis.parseFavoriteData( parsable )
+    return this.favs
   }
   parseFavoriteData ( html ) {
     // console.log( "Favshtml", html );

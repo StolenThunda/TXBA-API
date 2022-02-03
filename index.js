@@ -38,7 +38,7 @@ app.get( '/package/:id/:segmentId', async ( req, res ) =>
 )
 
 app.get( '/txba',( _req, res ) => 
-  res.json(Reflect.ownKeys(txba))
+  res.json(txba)
 )
 
 app.get( '/api', ( req, res ) => {
@@ -54,4 +54,4 @@ app.get( '/api', ( req, res ) => {
   res.json( routes )
   // res.json(app._router.stack)
 })
-app.listen( port, () => console.log( `listening on port: ${port}` ) )
+app.listen(process.env.PORT || 5000 , () => console.log( `listening on port: ${port}` ) )
